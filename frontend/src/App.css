@@ -1,0 +1,213 @@
+/* Tổng quan */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Căn từ trên xuống */
+  box-sizing: border-box;
+  padding: 20px 0; /* Giúp có khoảng cách trên dưới */
+}
+
+/* Container chính */
+.home {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+/* Form nhập liệu */
+form {
+  display: flex;
+  flex-direction: column; /* Đảm bảo input và button không bị chồng */
+  gap: 15px;
+  margin-bottom: 30px; /* Tạo khoảng cách với danh sách công việc */
+}
+
+/* Nút bấm (Button) */
+button {
+  background: linear-gradient(135deg, #4a90e2, #5a68f6);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3a7bd5, #4e54c8);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Ô nhập liệu (Input, Textarea) */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #dcdde1;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box; /* Giữ kích thước chính xác */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+/* Task Item */
+.task {
+  display: flex;
+  justify-content: space-between; /* Chia đều khoảng cách */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: #f9fafb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hiệu ứng khi di chuột vào Task */
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Checkbox (hoàn thành) */
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox .icon {
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.checkbox .icon:hover {
+  transform: scale(1.2);
+}
+
+.icon.completed {
+  color: #4caf50;
+}
+
+/* Nội dung công việc */
+.task-content {
+  flex: 1; /* Cho phép nội dung mở rộng */
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; /* Giãn cách với checkbox */
+}
+
+.task-content p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2c3e50;
+  word-break: break-word; /* Đảm bảo văn bản dài không tràn */
+}
+
+.task-content small {
+  color: #7f8c8d;
+}
+
+/* Gạch ngang nếu hoàn thành */
+.line_through {
+  text-decoration: line-through;
+  color: #bdc3c7;
+}
+
+/* Hành động (Sửa, Xóa) */
+.actions {
+  display: flex;
+  gap: 15px; /* Tạo khoảng cách giữa icon */
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 22px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.3);
+}
+
+.icon.delete {
+  color: #e74c3c;
+}
+
+.icon.edit {
+  color: #3498db;
+}
+
+.icon.save {
+  color: #2ecc71;
+}
+
+.icon.cancel {
+  color: #e67e22;
+}
+
+/* Hiệu ứng khi load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive (Màn hình nhỏ) */
+@media (max-width: 768px) {
+  .home {
+    padding: 20px;
+  }
+
+  .task {
+    flex-direction: column; /* Chuyển về dạng cột trên mobile */
+    align-items: flex-start; /* Căn trái các phần tử */
+  }
+
+  .checkbox {
+    margin-bottom: 10px; /* Cách phần tiêu đề */
+  }
+
+  .actions {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
