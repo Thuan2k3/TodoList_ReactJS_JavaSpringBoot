@@ -1,6 +1,6 @@
 # ✅ Dự án Quản lý Công Việc (TodoList App)
 
-Ứng dụng giúp người dùng tạo, quản lý và theo dõi tiến độ công việc hàng ngày. Dự án bao gồm frontend viết bằng **ReactJS (TypeScript)** và backend viết bằng **Spring Boot**.
+Ứng dụng giúp người dùng tạo, quản lý và theo dõi tiến độ công việc hàng ngày. Dự án bao gồm frontend viết bằng **ReactJS** và backend viết bằng **Spring Boot**.
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## ⚙️ Cài đặt
 
-### 🧩 Frontend (ReactJS + TypeScript)
+### 🧩 Frontend (ReactJS)
 
 ```bash
 cd frontend
