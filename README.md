@@ -32,6 +32,6 @@ npm run dev
 Backend (Spring Boot)
 Mở thư mục backend bằng IntelliJ IDEA
 
-Chạy class MainApplication.java
+Chạy class BackendApplication.java
 
 Đảm bảo bạn đã cấu hình cơ sở dữ liệu (MySQL)
