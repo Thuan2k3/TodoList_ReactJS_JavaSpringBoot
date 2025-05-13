@@ -9,8 +9,7 @@
 - Thêm công việc mới 📝  
 - Đánh dấu hoàn thành ✅  
 - Chỉnh sửa nội dung ✏️  
-- Xóa công việc ❌  
-- Lọc công việc: Tất cả / Đang làm / Đã hoàn thành 🔍  
+- Xóa công việc ❌
 - Lưu trữ dữ liệu trên backend (REST API)
 
 ---
